@@ -1,12 +1,17 @@
 #include <bits/stdc++.h>
-#include <vector>
 using namespace std;
 
 int main(){
-    int N;
-    cin >> N;
-    vector <long long> A(N);
-    for(int i =0;i<=N;i++){
-        cin >> A[i];
-    }  
-}   
+    long long T, expected_sum , actual_sum ,n;
+    cin >> T;
+    actual_sum=0;
+    for(int i=0;i<T-1;i++){
+        cin >> n;
+        actual_sum +=n;
+    }
+    expected_sum = (T*(T+1LL))/2;
+    cout << expected_sum - actual_sum << "\n"; 
+
+    return 0;
+    
+}
